@@ -1,14 +1,12 @@
-import React from 'react';
 import { useState } from 'react';
-
 import { Container, Row, Col } from 'react-bootstrap';
+import logo from "../assets/img/contact_img.jpg"
+
 
 const Contact = () => {
 	const formInitialDetails = {
-		firstName: '',
-		lastName: '',
+		name: '',
 		email: '',
-		phone: '',
 		message: '',
 	};
 
@@ -23,26 +21,44 @@ const Contact = () => {
 		});
 	};
 
-    const handleSubmit =() =>{
-        
-    }
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setButtonText('Sending...');
+		let response = await fetch(`${process.env.SERVER_URL}:${process.env.SERVER_PORT}/contact`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json;charset=utf-8',
+			},
+			body: JSON.stringify(formDetails),
+		});
+		setButtonText('Send');
+		let result = await response.json();
+		setFormDetails(formInitialDetails);
+		if (result.code == 200) {
+			setStatus({ success: true, message: 'Message sent successfully' });
+		} else {
+			setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+		}
+	};
 
 	return (
 		<section className='contact' id='connect'>
 			<Container>
 				<Row className='align-items-center'>
-					<Col size={12} md={6}></Col>
+					<Col size={12} md={6}>
+					<img src={logo} alt="Logo" />
+					</Col>
 					<Col size={12} md={6}>
 						<div className=''>
 							<h2>Get In Touch</h2>
-							<form onSubmit=''>
+							<form onSubmit={handleSubmit}>
 								<Row>
 									<Col size={12} sm={6} className='px-1'>
 										<input
 											type='text'
-											value={formDetails.firstName}
+											value={formDetails.name}
 											placeholder='Name'
-											onChange={(e) => onFormUpdate('firstName', e.target.value)}
+											onChange={(e) => onFormUpdate('name', e.target.value)}
 										/>
 									</Col>
 
