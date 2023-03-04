@@ -10,16 +10,16 @@ const Footer = () => {
 
 	return (
 		<footer className='footer'>
-			<Container className="mx-0 m-0">
-				<Row className='w-100 d-flex align-items-center justify-content-center'>
+			<Container className="mx-0">
+				<Row className='d-flex align-items-center justify-content-between'>
 					
-					<Col size={12} sm={4}>
+					<Col size={12} sm={3}>
 						{/* <img src={logo} alt='Logo' /> */}
 					</Col>
-                    <Col size={12} sm={4}>
-                    <p className="text-center">Copyright &copy;{year}. All Rights Reserved @MBCMorais</p>
+                    <Col size={12} sm={5}>
+                    <p className="text-center">&copy;{year}. All Rights Reserved @MBCMorais</p>
 					</Col>
-					<Col size={12} sm={4} className='text-center text-sm-end'>
+					<Col size={12} sm={4} className='text-center text-sm-end d-flex align-items-end'>
 						<div className='social-icon'>
 							<a href='#'>
 								<img src={navIcon1} alt='Icon' />
