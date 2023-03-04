@@ -1,50 +1,51 @@
 import React from 'react';
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
+import projImage1 from "../assets/img/project-default.jpg"
 
 const Projects = () => {
 	const projects = [
 		{
-			title: 'Business Startup',
+			title: 'example 1',
 			description: 'Design & Development',
             url:"teste",
             language:"html",
-			imgUrl: "projImg1",
+			imgUrl: projImage1,
 		},
 		{
-			title: 'Business Startup',
+			title: 'example 2',
 			description: 'Design & Development',
             url:"teste",
             language:"html",
-			imgUrl: "projImg2",
+			imgUrl: projImage1,
 		},
 		{
-			title: 'Business Startup',
+			title: 'example 3',
 			description: 'Design & Development',
             url:"teste",
             language:"html",
-			imgUrl: "projImg3",
+			imgUrl: projImage1,
 		},
 		{
-			title: 'Business Startup',
+			title: 'example 4',
 			description: 'Design & Development',
             url:"teste",
             language:"html",
-			imgUrl: "projImg1",
+			imgUrl: projImage1,
 		},
 		{
-			title: 'Business Startup',
+			title: 'example 5',
 			description: 'Design & Development',
             url:"teste",
             language:"html",
-			imgUrl: "projImg2",
+			imgUrl: projImage1,
 		},
 		{
-			title: 'Business Startup',
+			title: 'example 6',
 			description: 'Design & Development',
             url:"teste",
             language:"html",
-			imgUrl: "projImg3",
+			imgUrl: projImage1,
 		},
 	];
 

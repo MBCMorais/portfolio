@@ -7,13 +7,12 @@ const ProjectCard = ({ title, description, url, language, imgUrl }) => {
 			<div className='proj-imgbx'>
 				<a href={url}>
 					<img src={imgUrl} alt='img' />
-				</a>
-
-				<div className='proj-txtx'>
+					<div className='proj-txtx'>
 					<h4>{title}</h4>
-					<span>{description}</span>
+					<p>{description}</p>
 					<span>{language}</span>
 				</div>
+				</a>				
 			</div>
 		</Col>
 	);
