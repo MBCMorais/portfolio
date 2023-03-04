@@ -592,7 +592,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 /*** Footer */
 
 .footer {
-	padding: 0 0 20px 0;
+	padding: 0 0 50px 0;
 	width: 100%;
 	background: linear-gradient(to right, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -606,6 +606,9 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 	color: #b8b8b8;
 	letter-spacing: 0.5px;
 	margin-top: 20px;
+}
+.footer container{
+	margin: 0;
 }
 
 /*  */
