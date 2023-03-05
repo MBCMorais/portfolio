@@ -28,6 +28,7 @@ const NavBar = () => {
 		<Navbar bg='primary' expand='lg' className={'scrolled' ? 'scrolled' : ''}>
 			<Container>
 				<Navbar.Brand href='#home'>
+					<img src="../assets/img/logo.jpeg" alt="logo" />
 					<h3 className='text-white'>Marcelo Morais</h3>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls='basic-navbar-nav'>
