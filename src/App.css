@@ -211,6 +211,22 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
+.logoImg{
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 40%;
+	height: 40%;
+	margin: 3px;
+	padding-right: 5px;
+	
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
 .resume-button {
 	color: rgb(204, 204, 204);
 	background-color: transparent;
