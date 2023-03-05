@@ -62,13 +62,13 @@ const NavBar = () => {
 					</Nav>
 					<span className='navbar-text'>
 						<div className='social-icon'>
-							<a href='#'>
+							<a href='https://github.com/MBCMorais' target="_blank" rel="noreferrer">
 								<img src={navIcon1} alt='github' />
 							</a>
-							<a href='#'>
+							<a href='https://www.linkedin.com/in/marcelocmorais/' target="_blank" rel="noreferrer">
 								<img src={navIcon2} alt='Linkedin' />
 							</a>
-							<a href='#'>
+							<a href='https://www.instagram.com/marcelobcmorais/' target="_blank" rel="noreferrer">
 								<img src={navIcon3} alt='instagram' />
 							</a>
 						</div>
