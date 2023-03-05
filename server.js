@@ -1,8 +1,7 @@
-import cors from 'cors';
-import { createTransport } from 'nodemailer';
-import express from 'express';
+const cors = require('cors');
+const { createTransport } = require('nodemailer');
+const express = require('express');
 const router = express.Router();
-
 const path = require('path');
 
 // server used to send send emails
