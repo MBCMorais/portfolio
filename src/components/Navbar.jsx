@@ -5,6 +5,7 @@ import navIcon1 from '../assets/img/github_icon.svg';
 import navIcon2 from '../assets/img/linkedin-icon.svg';
 import navIcon3 from '../assets/img/instagram-icon.svg';
 import resumePdf from "../assets/poster.pdf"
+import logo from "../assets/img/logo.png"
 
 const NavBar = () => {
 	const [activeLink, SetActiveLink] = useState('home');
@@ -27,8 +28,9 @@ const NavBar = () => {
 	return (
 		<Navbar bg='primary' expand='lg' className={'scrolled' ? 'scrolled' : ''}>
 			<Container>
-				<Navbar.Brand href='#home'>
-					<img src="../assets/img/logo.jpeg" alt="logo" />
+				<Navbar.Brand href='#home' className='d-flex align-items-center'>
+					
+					<img className='logoImg' src={logo} alt="logo" />
 					<h3 className='text-white'>Marcelo Morais</h3>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls='basic-navbar-nav'>
@@ -71,7 +73,6 @@ const NavBar = () => {
 							</a>
 						</div>
 						<div>
-							
 							<a className="resume-button" href={resumePdf} target="_blank" rel="noopener noreferrer">Resume</a>
 						</div>
 						{/* <button className='' onClick={() => console.log('connect')}>
