@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dfccbc90.css",
+    "main.js": "/static/js/main.b74cf1f8.js",
+    "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
+    "static/media/poster.pdf": "/static/media/poster.227306bc05bdb85155f5.pdf",
+    "static/media/backgroundImg.jpg": "/static/media/backgroundImg.c46fdeec02270d2ce663.jpg",
+    "static/media/contact_img.jpg": "/static/media/contact_img.0d839a5acbd31eddfd9b.jpg",
+    "static/media/blue_background.jpg": "/static/media/blue_background.52b07a9556ee222c1699.jpg",
+    "static/media/person_programmer.jpg": "/static/media/person_programmer.049696706ccce5b55f5a.jpg",
+    "static/media/project-default.jpg": "/static/media/project-default.28d8b8cd407696f5f302.jpg",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/github_icon.svg": "/static/media/github_icon.aadc956da5333f549fb863b3b91138a7.svg",
+    "static/media/linkedin-icon.svg": "/static/media/linkedin-icon.c12d42da54813b1b1ed991841ec59c3a.svg",
+    "static/media/instagram-icon.svg": "/static/media/instagram-icon.4eae05304a48161f89188cbcc0738866.svg",
+    "index.html": "/index.html",
+    "main.dfccbc90.css.map": "/static/css/main.dfccbc90.css.map",
+    "main.b74cf1f8.js.map": "/static/js/main.b74cf1f8.js.map",
+    "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dfccbc90.css",
+    "static/js/main.b74cf1f8.js"
+  ]
+}
