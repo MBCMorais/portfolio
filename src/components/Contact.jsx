@@ -24,7 +24,7 @@ const Contact = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setButtonText('Sending...');
-		let response = await fetch(`${process.env.SERVER_URL}:${process.env.SERVER_PORT}/contact`, {
+		let response = await fetch(`${process.env.SERVER_URL}/contact`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8',
@@ -34,7 +34,7 @@ const Contact = () => {
 		setButtonText('Send');
 		let result = await response.json();
 		setFormDetails(formInitialDetails);
-		if (result.code == 200) {
+		if (result.code === 200) {
 			setStatus({ success: true, message: 'Message sent successfully' });
 		} else {
 			setStatus({ success: false, message: 'Something went wrong, please try again later.' });
@@ -74,7 +74,7 @@ const Contact = () => {
 									<Col size={12} className='px-1'>
 										<textarea
 											rows='6'
-											value=''
+											value={formDetails.message}
 											placeholder='Message'
 											onChange={(e) => onFormUpdate('message', e.target.value)}
 										></textarea>
