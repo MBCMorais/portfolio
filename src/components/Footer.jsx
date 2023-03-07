@@ -5,33 +5,34 @@ import navIcon2 from '../assets/img/linkedin-icon.svg';
 import navIcon3 from '../assets/img/instagram-icon.svg';
 
 const Footer = () => {
-
-   const year = new Date().getFullYear();
+	const year = new Date().getFullYear();
 
 	return (
 		<footer className='footer'>
-			<Container className="mx-0">
+			<Container className='mx-0 pt-4'>
 				<Row className='d-flex align-items-center justify-content-between'>
-					
 					<Col size={12} sm={3}>
 						{/* <img src={logo} alt='Logo' /> */}
 					</Col>
-                    <Col size={12} sm={5}>
-                    <p className="text-center">&copy;{year}. All Rights Reserved @MBCMorais</p>
+					<Col size={12} sm={5}>
+						<p className='text-center'>&copy;{year}. All Rights Reserved @MBCMorais</p>
 					</Col>
 					<Col size={12} sm={4} className='text-center text-sm-end d-flex align-items-end'>
 						<div className='social-icon'>
-							<a href='#'>
+							<a href='https://github.com/MBCMorais' target='_blank' rel='noreferrer'>
 								<img src={navIcon1} alt='Icon' />
 							</a>
-							<a href='#'>
+							<a
+								href='https://www.linkedin.com/in/marcelocmorais/'
+								target='_blank'
+								rel='noreferrer'
+							>
 								<img src={navIcon2} alt='Icon' />
 							</a>
-							<a href='#'>
+							<a href='https://www.instagram.com/marcelobcmorais/' target='_blank' rel='noreferrer'>
 								<img src={navIcon3} alt='Icon' />
 							</a>
 						</div>
-						
 					</Col>
 				</Row>
 			</Container>
