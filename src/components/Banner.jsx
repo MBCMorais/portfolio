@@ -67,8 +67,8 @@ const Banner = () => {
 							officia ducimus laboriosam sequi illum? Culpa, officia numquam.
 						</p>
 						<button className='' onClick={() => console.log('connect')}>
-							Let's Connect
-							<ArrowRightCircle size={25} />
+							<a className='navbar-link text-white text-decoration-none' href="#connect">Let's Connect <ArrowRightCircle size={25} /></a>
+							
 						</button>
 					</Col>
 					<Col xs={12} md={6} xl={5}>
