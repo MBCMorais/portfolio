@@ -5,8 +5,15 @@ const router = express.Router();
 const path = require('path');
 
 // server used to send send emails
+
+const corsOptions = {
+	origin: '*',
+	credentials: true, //access-control-allow-credentials:true
+	optionSuccessStatus: 200,
+};
+
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 require('dotenv').config();
 
