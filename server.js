@@ -7,8 +7,8 @@ const path = require('path');
 // server used to send send emails
 
 const corsOptions = {
-	origin: '*',
-	credentials: true, //access-control-allow-credentials:true
+	origin: 'https://marcelomorais.netlify.app/',
+	methods: ['GET', 'POST'],
 	optionSuccessStatus: 200,
 };
 
