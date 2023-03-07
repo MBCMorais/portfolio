@@ -26,7 +26,8 @@ const Contact = () => {
 		let response = await fetch(`https://marcelomorais.netlify.app/contact`, {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json;charset=utf-8',
+				'Content-Type': 'application/json;',
+				'Accept': 'application/json'
 			},
 			body: JSON.stringify(formDetails),
 		});
