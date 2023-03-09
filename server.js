@@ -35,9 +35,9 @@ const contactEmail = createTransport({
 		pass: process.env.EMAIL_PASSWORD,
 	},
 	// !DO not do this in production
-	tls: {
-		rejectUnauthorized: false,
-	},
+	// tls: {
+	// 	rejectUnauthorized: false,
+	// },
 });
 
 contactEmail.verify((error) => {
