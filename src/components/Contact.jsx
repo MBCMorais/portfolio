@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import logo from '../assets/img/contact_img.jpg';
+import axios from 'axios';
 
 const Contact = () => {
 	const formInitialDetails = {
@@ -12,6 +13,7 @@ const Contact = () => {
 	const [formDetails, setFormDetails] = useState(formInitialDetails);
 	const [buttonText, setButtonText] = useState('Send');
 	const [status, setStatus] = useState({});
+	const [visible, setVisible] = useState(false);
 
 	const onFormUpdate = (category, value) => {
 		setFormDetails({
@@ -19,26 +21,60 @@ const Contact = () => {
 			[category]: value,
 		});
 	};
-
+	// https://marcelomorais.netlify.app/contact
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setButtonText('Sending...');
-		let response = await fetch(`https://marcelomorais.netlify.app/contact`, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json;',
-				'Accept': 'application/json'
+		console.log(typeof formDetails);
+		console.log(formDetails);
+
+		let response = await axios.post(
+			'/contact',
+			{ name: 'teste', email: 'marcelo.calvao@gmail.com' },
+			{
+				headers: {
+					'Content-Type': 'application/json;',
+				},
 			},
-			body: JSON.stringify(formDetails),
-		});
+		);
+
+		// .then((res) => {
+		// 	console.log(res);
+		// 	console.log(JSON.stringify(res.data));
+		// })
+		// .catch((err) => {
+		// 	console.log(err);
+		// });
+		// if (response === undefined) {
+		// 	setButtonText('send');
+		// 	setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+		// 	return;
+		// }
+
+		// let response = await fetch(`http://localhost:5000/contact`, {
+		// 	method: 'POST',
+		// 	headers: {
+		// 		'Content-Type': 'application/json;',
+		// 		'Accept': 'application/json'
+		// 	},
+		// 	body: JSON.stringify(formDetails),
+		// });
+
+		console.log('response:', response);
 		setButtonText('Send');
-		let result = await response.json();
+
 		setFormDetails(formInitialDetails);
-		if (result.code === 200) {
+
+		if (response.status === 200) {
+			setVisible(true);
 			setStatus({ success: true, message: 'Message sent successfully' });
 		} else {
+			setVisible(true);
 			setStatus({ success: false, message: 'Something went wrong, please try again later.' });
 		}
+		setTimeout(() => {
+			setVisible(false);
+		}, 3000);
 	};
 
 	return (
@@ -78,17 +114,18 @@ const Contact = () => {
 											placeholder='Message'
 											onChange={(e) => onFormUpdate('message', e.target.value)}
 										></textarea>
+
+										{status.message && visible && (
+											<Row>
+												<p id='message' className={status.success === false ? 'danger' : 'success'}>
+													{status.message}
+												</p>
+											</Row>
+										)}
 										<button type='submit'>
 											<span>{buttonText}</span>
 										</button>
 									</Col>
-									{status.message && (
-										<Col>
-											<p className={status.success === false ? 'danger' : 'success'}>
-												{status.message}
-											</p>
-										</Col>
-									)}
 								</Row>
 							</form>
 						</div>
