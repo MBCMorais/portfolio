@@ -61,9 +61,25 @@ select:focus {
 	outline: none;
 }
 
+@media (min-width: 1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+p.success {
+	color: rgb(0, 0, 0);
+	padding: 10px;
+}
+
+p.danger {
+	color: rgb(138, 14, 14);
+	padding: 10px;
+}
+
 /************ Navbar Css ************/
 nav.navbar {
-	
 	padding: 18px 0;
 	position: fixed;
 	width: 100%;
@@ -93,6 +109,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 span.navbar-text {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 .social-icon {
 	display: inline-block;
@@ -212,8 +229,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
-.logoImg{
-	
+.logoImg {
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -221,7 +237,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 	height: 10%;
 	margin: 3px;
 	padding-right: 5px;
-	
+
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -230,7 +246,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 }
 
 .resume-button {
-	
 	color: rgb(204, 204, 204);
 	background-color: transparent;
 	border: 1px solid rgb(254, 255, 255);
@@ -613,8 +628,11 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .footer {
 	padding: 0 0 50px 0;
 	width: 100%;
-	background: linear-gradient(to right, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+	background: linear-gradient(
+		to right,
+		#232526,
+		#414345
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .footer img {
 	width: 26%;
@@ -626,7 +644,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 	letter-spacing: 0.5px;
 	margin-top: 20px;
 }
-.footer container{
+.footer container {
 	margin: 0;
 }
 
